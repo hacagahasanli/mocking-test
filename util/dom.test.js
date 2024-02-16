@@ -19,7 +19,7 @@ beforeEach(() => {
     document.write(htmlDocumentContent);
 })
 
-describe('showError()', () => {
+describe('showError() func', () => {
   it('should add an error paragraph to the id="errors" element', () => {
     showError('Test');
 
