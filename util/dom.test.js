@@ -6,13 +6,14 @@ import { beforeEach, describe, expect, it, vi } from 'vitest';
 
 import { showError } from './dom';
 
-const window = new Window();
 
 const htmlDocPath = path.join(process.cwd(), 'index.html');
 const htmlDocumentContent = fs.readFileSync(htmlDocPath).toString();
 
 const document = window.document;
 vi.stubGlobal('document', document);
+
+const window = new Window();
 
 beforeEach(() => {
     document.body.innerHTML = '';
